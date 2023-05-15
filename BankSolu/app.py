@@ -6,7 +6,7 @@ app = Flask(__name__)
 app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///projet.db"
 db = SQLAlchemy(app)
 
-@app.route("/base.html")
+@app.route("/base")
 def accueil():
 
     return render_template("base.html")
