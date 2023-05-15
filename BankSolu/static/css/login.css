@@ -1,0 +1,41 @@
+body{
+    background: #FFFAEE;
+}
+.grande-div{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background: white;
+    transform: translate(-50%,-50%);
+   
+    width: 50%;
+    height: 700px;
+  display: flex;
+  box-shadow: 10px 5px 5px rgb(104, 104, 104);
+}
+.div-1{
+    background: #7451EB;
+    width: 40%;
+    height: 100%;
+}
+.div-2{
+    background: #FFFAEE; 
+    width: 60%;
+    margin-left: 5px;
+    height: 100%;
+}
+input{
+        position: relative;
+        top: 50%;
+        left: 50%;
+        background: white;
+        transform: translate(-50%,-50%);
+        display: block;
+        margin: 3px;
+        width: 50%;
+        height: 70px;
+        border: none;
+        border-radius: 20px;
+        
+        
+}
