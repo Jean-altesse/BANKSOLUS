@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulaire</title>
+    <link rel="stylesheet" href="../static/css/rendez_vous.css">
+</head>
+<body>
+    <div class="contour_rectangle">
+        <hr>
+    <p>Formulaire de prise de rendez-vous</p>
+    <hr>
+    <label for="">Pour qui prenez-vous rendez-vous? <span class="champs_obligatoire">*</span></label>
+    <select name="button" id="">
+        <option value="">Moi même</option>
+        <option value="">Un proche</option>
+    </select>
+    <label for="">Nom complet <span class="champs_obligatoire">*</span></label>
+    <input type="text" placeholder="Nom">
+    <input type="text" placeholder="Prenom">
+    <label for="">Sex</label>
+    <select name="" id="">
+        <option value="">F</option>
+        <option value="">M</option>
+    </select>
+    <label for="">Numero <span class="champs_obligatoire">*</span></label>
+    <input type="number" placeholder="Numero de telephone">
+    <input type="number" placeholder="Numero du compte bancaire">
+    <label for="">Selectionnez la date du rendez-vous <span class="champs_obligatoire">*</span></label>
+    <input type="datetime-local">
+    <label for="">Adresse <span class="champs_obligatoire">*</span></label>
+    <select name="" id="">
+        <option value="">Abobo</option>
+        <option value="">Yopougon</option>
+        <option value="">Koumassi</option>
+        <option value="">Cocody</option>
+        <option value="">Angré</option>
+    </select>
+    <label for="">Raison de la prise du rendez-vous <span class="champs_obligatoire">*</span> </label>
+    <textarea type="text" name="" id="" cols="40" rows="10" placeholder="Veillez fournir des informations concernant votre demande de prise de rendez-vous"></textarea>
+    <div style="width: 100%;">
+        <div style="display: flex; ">
+         <input type="checkbox" style="width:10px;">
+         <label style="font-size: 15px; margin-top: 20px; position: relative;" for="">Recevoir la réponse de la demande par e-mail</label>
+       </div>
+       <div style="display: flex; ">
+         <input type="checkbox" style="width:10px;" >
+         <label style="font-size: 15px; margin-top: 20px; position: relative;"  for="">Recevoir la réponse de la démande par sms ou appel</label>
+       </div>
+     </div>
+    <button>Prendre rendez-vous</button>
+   
+    </div>
+</body>
+</html>
