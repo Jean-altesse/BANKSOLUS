@@ -1,57 +1,108 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulaire</title>
+<html>
     <link rel="stylesheet" href="../static/css/rendez_vous.css">
+<head>
+    <title>Formulaire de prise de rendez-vous bancaire</title>
 </head>
 <body>
-    <div class="contour_rectangle">
-        <hr>
-    <p>Formulaire de prise de rendez-vous</p>
-    <hr>
-    <label for="">Pour qui prenez-vous rendez-vous? <span class="champs_obligatoire">*</span></label>
-    <select name="button" id="">
-        <option value="">Moi même</option>
-        <option value="">Un proche</option>
-    </select>
-    <label for="">Nom complet <span class="champs_obligatoire">*</span></label>
-    <input type="text" placeholder="Nom">
-    <input type="text" placeholder="Prenom">
-    <label for="">Sex</label>
-    <select name="" id="">
-        <option value="">F</option>
-        <option value="">M</option>
-    </select>
-    <label for="">Numero <span class="champs_obligatoire">*</span></label>
-    <input type="tel" placeholder="Numero de telephone">
-    <input type="tel" placeholder="Numero du compte bancaire">
-    <label for="">Selectionnez la date du rendez-vous <span class="champs_obligatoire">*</span></label>
-    <input type="datetime-local">
-    <label for="">Adresse <span class="champs_obligatoire">*</span></label>
-    <select name="" id="">
-        <option value="">Abobo</option>
-        <option value="">Yopougon</option>
-        <option value="">Koumassi</option>
-        <option value="">Cocody</option>
-        <option value="">Angré</option>
-    </select>
-    <label for="">Raison de la prise du rendez-vous <span class="champs_obligatoire">*</span> </label>
-    <textarea type="text" name="" id="" cols="40" rows="10" placeholder="Veillez fournir des informations concernant votre demande de prise de rendez-vous"></textarea>
-    <div style="width: 100%;">
-        <div style="display: flex; ">
-         <input type="checkbox" style="width:10px;">
-         <label style="font-size: 15px; margin-top: 20px; position: relative;" for="">Recevoir la réponse de la demande par e-mail</label>
-       </div>
-       <div style="display: flex;">
-         <input type="checkbox" style="width:10px;" >
-         <label style="font-size: 15px; margin-top: 20px; position: relative;"  for="">Recevoir la réponse de la démande par sms ou appel</label>
-       </div>
-     </div>
-    <button>Prendre rendez-vous</button>
-   
+    <h1>Formulaire de prise de rendez-vous bancaire</h1>
+<hr>
+
+<br>
+<br>
+    <div class="container">
+        <form method="post" action="{{ url_for('submit_form') }}">
+            <div class="form-group">
+                <label for="">Pour qui prenez-vous rendez-vous? <span class="champs_obligatoire">*</span></label>
+                <select name="button" id="" required>
+                    <option value=""></option>
+                    <option value="">Moi même</option>
+                    <option value="">Un proche</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="">Numero du compte</label> 
+                <input type="tel" required>
+            </div>
+
+            <div class="form-group">
+                <label for="nom">Nom Complet:</label>
+                <input type="text" id="nom" name="nom" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email :</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+
+            <div class="form-group">
+                <label for="">Sex</label>
+                <select name="sex" id="sex" required>
+                    <option value="">F</option>
+                    <option value="">M</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="">Adresse <span class="champs_obligatoire">*</span></label>
+                <select name="" id="" required>
+                    <option value="">Abobo</option>
+                    <option value="">Yopougon</option>
+                    <option value="">Koumassi</option>
+                    <option value="">Cocody</option>
+                    <option value="">Angré</option>
+                </select>
+            </div> 
+
+        
+        </form >
+        
+        <form action="" style="width: 100%; margin-left: 120%; bottom: 500px; position: relative;">
+            <div >
+                <div class="form-group">
+                    <label for="">Numero de telephone</label>
+                    <input type="tel" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="date">Date :</label>
+                    <input type="date" id="date" name="date" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="heure">Heure :</label>
+                    <input type="time" id="heure" name="heure" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="">Raison de la prise du rendez-vous <span class="champs_obligatoire">*</span> </label>
+                    <textarea type="text" name="" id="" cols="40" rows="10"  required></textarea>
+                </div>
+
+                <div class="form-group">
+                    <div style="width: 100%;">
+                    <div style="display: flex; ">
+                    <input type="checkbox" style="width:10px;">
+                    <label style="font-size: 15px; margin-top: 5px; position: relative;" for="">Recevoir la réponse de la demande par e-mail</label>
+                </div>
+
+                <div class="form-group">
+                    <div style="display: flex;">
+                        <input type="checkbox" style="width:10px;" >
+                        <label style="font-size: 15px; margin-top: 5px; position: relative;"  for="">Recevoir la réponse de la démande par sms ou appel</label>
+                    </div>
+                </div>
+
+                
+                <div class="form-group">
+                    <a href="transaction.html"><input type="submit" value="Prendre rendez-vous"></a>
+                </div>
+
+            </div>
+        </form>
+
     </div>
 </body>
 </html>
