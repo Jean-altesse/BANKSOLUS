@@ -1,63 +1,145 @@
-/* *{
-    border: 1px solid;
-} */
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 20px;
-    
+* {
+  font-family: "Poppins", sans-serif;
+  margin: 0px;
+  padding: 0px;
 }
 
-h1 {
-    text-align: center;
+body{
+    background-color: #FFFAEE;
+    display: flex;
+    justify-content: center;
 }
 
-.container {
-    max-width: 450px;
-    margin: 0 auto;
-   margin-left: 25%;
+.content{
+    margin: 8rem;
+    font-size: 3rem;
 }
 
-.form-group {
-    margin-bottom: 20px;
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 750px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 20px;
+  position: relative;
+  border: 1px solid red;
 }
 
-label {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
+.title {
+  font-size: 28px;
+  color: royalblue;
+  font-weight: 600;
+  letter-spacing: -1px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding-left: 30px;
 }
 
-input[type="text"],
-input[type="tel"],
-input[type="email"],
-select {
-    width: 100%;
-    padding: 10px;
-    font-size: 16px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
+.title::before,
+.title::after {
+  position: absolute;
+  content: "";
+  height: 16px;
+  width: 16px;
+  border-radius: 50%;
+  left: 0px;
+  background-color: royalblue;
 }
 
-input[type="submit"] {
-    position: relative;
-    width: 60%;
-    height: 50px;
-    padding: 10px;
-    font-size: 16px;
-    background-color: #605ecb;
-    color: white;
-    border: none;
-    margin-left: -40%;
-    top: 100px;
-    border-radius: 5px;
-    cursor: pointer;
+.title::before {
+  width: 18px;
+  height: 18px;
+  background-color: royalblue;
 }
 
+.title::after {
+  width: 18px;
+  height: 18px;
+  animation: pulse 1s linear infinite;
+}
 
+.message,
+.signin {
+  color: rgba(88, 87, 87, 0.822);
+  font-size: 14px;
+}
 
+.signin {
+  text-align: center;
+}
 
+.signin a {
+  color: royalblue;
+}
 
+.signin a:hover {
+  text-decoration: underline royalblue;
+}
 
+.form label {
+  position: relative;
+}
 
- 
+.form label .input {
+  width: 100%;
+  padding: 10px 10px 20px 10px;
+  outline: 0;
+  border: 1px solid rgba(105, 105, 105, 0.397);
+  border-radius: 10px;
+}
+
+.form label .input + span {
+  position: absolute;
+  left: 10px;
+  top: 15px;
+  color: grey;
+  font-size: 0.9em;
+  cursor: text;
+  transition: 0.3s ease;
+}
+
+.form label .input:placeholder-shown + span {
+  top: 15px;
+  font-size: 0.9em;
+}
+
+.form label .input:focus + span,
+.form label .input:valid + span {
+  top: 30px;
+  font-size: 0.7em;
+  font-weight: 600;
+}
+
+.form label .input:valid + span {
+  color: green;
+}
+
+.submit {
+  border: none;
+  outline: none;
+  background-color: royalblue;
+  padding: 10px;
+  border-radius: 10px;
+  color: #fff;
+  font-size: 16px;
+  transform: 0.3s ease;
+}
+
+.submit:hover {
+  background-color: rgb(56, 90, 194);
+}
+
+@keyframes pulse {
+  from {
+    transform: scale(0.9);
+    opacity: 1;
+  }
+
+  to {
+    transform: scale(1.8);
+    opacity: 0;
+  }
+}

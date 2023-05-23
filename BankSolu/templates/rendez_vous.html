@@ -1,108 +1,50 @@
 <!DOCTYPE html>
-<html>
-    <link rel="stylesheet" href="../static/css/rendez_vous.css">
-<head>
-    <title>Formulaire de prise de rendez-vous bancaire</title>
-</head>
-<body>
-    <h1>Formulaire de prise de rendez-vous bancaire</h1>
-<hr>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../static/css/rendez_vous.css" />
+    <!-- Google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300&display=swap"
+      rel="stylesheet"
+    />
+    <title>Prise de RDV</title>
+  </head>
 
-<br>
-<br>
+  <body>
     <div class="container">
-        <form method="post" action="{{ url_for('submit_form') }}">
-            <div class="form-group">
-                <label for="">Pour qui prenez-vous rendez-vous? <span class="champs_obligatoire">*</span></label>
-                <select name="button" id="" required>
-                    <option value=""></option>
-                    <option value="">Moi même</option>
-                    <option value="">Un proche</option>
-                </select>
-            </div>
+      <div class="content">Formulaire de prise de rendez-vous</div>
+      <form class="form">
+        <p class="title">Entrez vos détails</p>
+        <p class="message">
+          Donnez vos informations relative a votre prise de rendez-vous
+        </p>
 
-            <div class="form-group">
-                <label for="">Numero du compte</label> 
-                <input type="tel" required>
-            </div>
+        <select name="" id="">
+          <option value="" selected>Pour qui prenez-vous le rendez-vous ?</option>
+          <option value="">Moi</option>
+          <option value="">Un proche</option>
+        </select>
 
-            <div class="form-group">
-                <label for="nom">Nom Complet:</label>
-                <input type="text" id="nom" name="nom" required>
-            </div>
+        <label>
+          <input required="" placeholder="" type="text" class="input" />
+          <span>Pour qui prenez-vous le rendez-vous ?</span>
+        </label>
 
-            <div class="form-group">
-                <label for="email">Email :</label>
-                <input type="email" id="email" name="email" required>
-            </div>
-
-
-            <div class="form-group">
-                <label for="">Sex</label>
-                <select name="sex" id="sex" required>
-                    <option value="">F</option>
-                    <option value="">M</option>
-                </select>
-            </div>
-
-            <div class="form-group">
-                <label for="">Adresse <span class="champs_obligatoire">*</span></label>
-                <select name="" id="" required>
-                    <option value="">Abobo</option>
-                    <option value="">Yopougon</option>
-                    <option value="">Koumassi</option>
-                    <option value="">Cocody</option>
-                    <option value="">Angré</option>
-                </select>
-            </div> 
-
-        
-        </form >
-        
-        <form action="" style="width: 100%; margin-left: 120%; bottom: 500px; position: relative;">
-            <div >
-                <div class="form-group">
-                    <label for="">Numero de telephone</label>
-                    <input type="tel" required>
-                </div>
-
-                <div class="form-group">
-                    <label for="date">Date :</label>
-                    <input type="date" id="date" name="date" required>
-                </div>
-
-                <div class="form-group">
-                    <label for="heure">Heure :</label>
-                    <input type="time" id="heure" name="heure" required>
-                </div>
-
-                <div class="form-group">
-                    <label for="">Raison de la prise du rendez-vous <span class="champs_obligatoire">*</span> </label>
-                    <textarea type="text" name="" id="" cols="40" rows="10"  required></textarea>
-                </div>
-
-                <div class="form-group">
-                    <div style="width: 100%;">
-                    <div style="display: flex; ">
-                    <input type="checkbox" style="width:10px;">
-                    <label style="font-size: 15px; margin-top: 5px; position: relative;" for="">Recevoir la réponse de la demande par e-mail</label>
-                </div>
-
-                <div class="form-group">
-                    <div style="display: flex;">
-                        <input type="checkbox" style="width:10px;" >
-                        <label style="font-size: 15px; margin-top: 5px; position: relative;"  for="">Recevoir la réponse de la démande par sms ou appel</label>
-                    </div>
-                </div>
-
-                
-                <div class="form-group">
-                    <a href="transaction.html"><input type="submit" value="Prendre rendez-vous"></a>
-                </div>
-
-            </div>
-        </form>
-
+        <label>
+          <input required="" placeholder="" type="text" class="input" />
+          <span>Numero du compte</span>
+        </label>
+        <label>
+          <input required="" placeholder="" type="text" class="input" />
+          <span>Nom complet</span>
+        </label>
+        <button class="submit">Soumettre</button>
+      </form>
     </div>
-</body>
+  </body>
 </html>
