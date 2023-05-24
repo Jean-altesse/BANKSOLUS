@@ -5,141 +5,53 @@
 }
 
 body{
-    background-color: #FFFAEE;
-    display: flex;
-    justify-content: center;
+  background-color: #fffaee;
 }
 
-.content{
-    margin: 8rem;
-    font-size: 3rem;
-}
-
-.form {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  max-width: 750px;
-  background-color: #fff;
+.container {
+  max-width: 600px;
+  margin: 0 auto;
   padding: 20px;
-  border-radius: 20px;
+  border: solid red 1px;
   position: relative;
-  border: 1px solid red;
+  top: 6rem;
 }
 
-.title {
-  font-size: 28px;
-  color: royalblue;
-  font-weight: 600;
-  letter-spacing: -1px;
-  position: relative;
-  display: flex;
-  align-items: center;
-  padding-left: 30px;
-}
-
-.title::before,
-.title::after {
-  position: absolute;
-  content: "";
-  height: 16px;
-  width: 16px;
-  border-radius: 50%;
-  left: 0px;
-  background-color: royalblue;
-}
-
-.title::before {
-  width: 18px;
-  height: 18px;
-  background-color: royalblue;
-}
-
-.title::after {
-  width: 18px;
-  height: 18px;
-  animation: pulse 1s linear infinite;
-}
-
-.message,
-.signin {
-  color: rgba(88, 87, 87, 0.822);
-  font-size: 14px;
-}
-
-.signin {
+h1 {
   text-align: center;
 }
 
-.signin a {
-  color: royalblue;
+form {
+  display: grid;
+  grid-gap: 10px;
 }
 
-.signin a:hover {
-  text-decoration: underline royalblue;
+label {
+  font-weight: bold;
 }
 
-.form label {
-  position: relative;
-}
-
-.form label .input {
+input,
+textarea {
   width: 100%;
-  padding: 10px 10px 20px 10px;
-  outline: 0;
-  border: 1px solid rgba(105, 105, 105, 0.397);
-  border-radius: 10px;
-}
-
-.form label .input + span {
-  position: absolute;
-  left: 10px;
-  top: 15px;
-  color: grey;
-  font-size: 0.9em;
-  cursor: text;
-  transition: 0.3s ease;
-}
-
-.form label .input:placeholder-shown + span {
-  top: 15px;
-  font-size: 0.9em;
-}
-
-.form label .input:focus + span,
-.form label .input:valid + span {
-  top: 30px;
-  font-size: 0.7em;
-  font-weight: 600;
-}
-
-.form label .input:valid + span {
-  color: green;
-}
-
-.submit {
-  border: none;
-  outline: none;
-  background-color: royalblue;
   padding: 10px;
-  border-radius: 10px;
-  color: #fff;
-  font-size: 16px;
-  transform: 0.3s ease;
+  border: 1px solid #ccc;
+  border-radius: 4px;
 }
 
-.submit:hover {
-  background-color: rgb(56, 90, 194);
+input[type="submit"] {
+  background-color: #7451EB;
+  color: white;
+  cursor: pointer;
 }
 
-@keyframes pulse {
-  from {
-    transform: scale(0.9);
-    opacity: 1;
-  }
+input[type="submit"]:hover {
+  background-color: #9DA9F3;
+  scale: 1.02;
+}
 
-  to {
-    transform: scale(1.8);
-    opacity: 0;
+@media screen and (max-width: 480px) {
+  input,
+  textarea {
+    width: 100%;
   }
 }

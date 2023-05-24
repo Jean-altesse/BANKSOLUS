@@ -17,34 +17,53 @@
 
   <body>
     <div class="container">
-      <div class="content">Formulaire de prise de rendez-vous</div>
-      <form class="form">
-        <p class="title">Entrez vos détails</p>
-        <p class="message">
-          Donnez vos informations relative a votre prise de rendez-vous
-        </p>
+      <h1>Formulaire de Prise de rendez-vous</h1>
+      <form action="#" method="post">
+        <label for="name">Nom complet :</label>
+        <input
+          type="text"
+          id="name"
+          name="name"
+          placeholder="Votre nom complet"
+          required
+        />
 
-        <select name="" id="">
-          <option value="" selected>Pour qui prenez-vous le rendez-vous ?</option>
-          <option value="">Moi</option>
-          <option value="">Un proche</option>
-        </select>
+        <label for="email">Adresse e-mail :</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="Votre adresse e-mail"
+          required
+        />
 
-        <label>
-          <input required="" placeholder="" type="text" class="input" />
-          <span>Pour qui prenez-vous le rendez-vous ?</span>
-        </label>
+        <label for="phone">Numéro de téléphone :</label>
+        <input
+          type="tel"
+          id="phone"
+          name="phone"
+          placeholder="Votre numéro de téléphone"
+          required
+        />
 
-        <label>
-          <input required="" placeholder="" type="text" class="input" />
-          <span>Numero du compte</span>
-        </label>
-        <label>
-          <input required="" placeholder="" type="text" class="input" />
-          <span>Nom complet</span>
-        </label>
-        <button class="submit">Soumettre</button>
+        <label for="date">Date du rendez-vous :</label>
+        <input type="date" id="date" name="date" required />
+
+        <label for="time">Heure du rendez-vous :</label>
+        <input type="time" id="time" name="time" required />
+
+        <label for="message">Message :</label>
+        <textarea
+          id="message"
+          name="message"
+          placeholder="Votre message"
+        ></textarea>
+
+        <input type="submit" value="Prendre rendez-vous" />
       </form>
+      <div class="image">
+        <img src="" alt="">
+      </div>
     </div>
   </body>
 </html>
