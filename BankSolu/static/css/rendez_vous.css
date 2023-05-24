@@ -12,9 +12,22 @@ body{
   max-width: 600px;
   margin: 0 auto;
   padding: 20px;
-  border: solid red 1px;
+  border: solid #9DA9F3 3px;
+  border-radius: 20px;
+  box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, .2);
   position: relative;
   top: 6rem;
+  /* background-image: url(../img/prise.jpg); */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: rgba(137, 149, 221, .4);
+  align-items: center;
+}
+
+.image{
+  width: 200px;
+  height: 200px;
 }
 
 h1 {
@@ -24,10 +37,14 @@ h1 {
 form {
   display: grid;
   grid-gap: 10px;
+  width: 80%;
+  position: relative;
+  left: 3rem;
 }
 
 label {
-  font-weight: bold;
+  font-weight: bolder;
+  color: black;
 }
 
 input,
@@ -47,6 +64,18 @@ input[type="submit"] {
 input[type="submit"]:hover {
   background-color: #9DA9F3;
   scale: 1.02;
+}
+
+footer {
+  margin-top: 20.2rem;
+  background-color: #7451EB;
+  text-align: center;
+  padding: 10px;
+  color: #fffaee;
+}
+
+footer p {
+  margin: 0;
 }
 
 @media screen and (max-width: 480px) {
