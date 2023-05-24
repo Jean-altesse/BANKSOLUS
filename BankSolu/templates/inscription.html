@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../static/css/inscription.css" />
+    <script src="../static/js/inscription.js" defer></script>
+    <title>Registraion Form</title>
+  </head>
+  <body>
+    <form action="#" class="form">
+        <h2 style="width: 30px;"><strong> Banksolu</strong></h2>
+      <h1 class="text-center"><strong> Connexion</strong></h1>
+      <!-- Progress bar -->
+      <div class="progressbar">
+        <div class="progress" id="progress"></div>
+        
+        <div
+          class="progress-step progress-step-active"
+          data-title="Identification"
+        ></div>
+        <div class="progress-step" data-title="Vérification"></div>
+        <div class="progress-step" data-title="Creation"></div>
+        <div class="progress-step" data-title="Succès"></div>
+      </div> 
+   
+      <!-- Steps -->
+      <div class="form-step form-step-active">
+        <div class="accueil">
+            <p><li> Bienvenue - commençons</li></p>
+            <p><strong> Parlez-nous de vos informations de base<br>
+                et des exigences de votre compte </strong></p>
+                <p><li> A qui souhaitez-vous ouvrir un compte ? <strong class="etoile">*</strong></li></p>
+                <div style="display: flex;">
+                  <input type="radio" name="drone" style="width:50px">
+                  <label for="">personnel</label>
+                  <input type="radio" name="drone" style="width:50px">
+                  <label for="">profetionnel</label>
+                  <input type="radio" name="drone" style="width:50px">
+                  <label for="">famille</label>
+                </div>
+                
+        </div>
+        <div class="input-group">
+          <label for="username">Votre numero de téléphone<strong class="etoile">*</strong></label>
+          <input type="text" placeholder="Numero de téléphone" name="username" id="username" />
+        </div>
+        <div class="input-group">
+          <label for="position">Votre adresse e-mail <strong class="etoile">*</strong></label>
+          <input type="text" placeholder="Adresse e-mail" name="position" id="position" />
+          <p><h2>Les champs marqués d'une * sont obligatoires</h2> </p>
+        </div>
+       
+        <div class="next">
+          <a href="#" class="btn btn-next width-50 ml-auto">Continuer</a>
+        </div>
+        <div class="div-text">
+            <p><strong> Avantages des services bancaires en ligne </strong><br>
+                <br>
+            Vérifiez l'activité récente du compte et accédez aux soldes des comptes à partir d'un emplacement pratique.<br>
+            Transférez des fonds entre vos comptes Banksolu et les comptes d'autres banques.<br>
+            <br>
+            Allez sans papier avec jusqu'à 25 mois de relevés de dépôt.<br>
+            <br>
+           <strong>Besoin d'assistance ?</strong> <br>
+            <br>
+            Pour l'assistance technique des services bancaires en ligne, le soutien au paiement de factures ou les demandes générales de compte<br>
+            <br>
+            Composez le +225 0700000000</p>
+          
+        </div>
+      </div>
+      <div class="form-step" style="height:700px;">
+        <br>
+        <br>
+        <br>
+        <p><li> Parlez-nous de vos informations de base et des exigences de votre compte</li></p>
+        <div class="input-group">
+          <label for="phone">Entrez votre OTP<strong class="etoile">*</strong></label>
+          <input type="text" placeholder="OTP sur votre numéro de mobile" name="phone" id="phone" />
+        </div>
+        <div class="input-group">
+            <label for="phone">Comment souhaitez-vous  verifier? </label>
+             <select name="" id="">
+              <option value="">Passport</option>
+             </select>
+          </div>
+        <div class="input-group">
+          <label for="email">Email</label>
+          <input type="text" placeholder="Entrez votre e-mail" name="email" id="email" />
+        </div>
+        <p >
+          <label for="myfile" >Deposez un fichier</label>
+          <input style="background: rgba(0, 0, 255, 0.408);" class="fichier" type="file" id="myfile" name="myfile">
+      </p>
+      <p><h2>Les champs marqués d'une * sont obligatoires</h2>
+        <div class="next" >
+        <div class="btns-group" >
+          <a href="#" class="btn btn-prev">Previous</a>
+          <a href="#" class="btn btn-next">Next</a>
+        </div>
+      </div>
+     </p>
+
+        <div class="div-text2">
+        <p>Avantages des services bancaires en ligne <br>
+          <br>
+          Vérifiez l'activité récente du compte et accédez aux soldes des comptes à partir d'un emplacement pratique. <br>
+          <br>
+          Transférez des fonds entre vos comptes BankSolu et les comptes d'autres banques. <br>
+          <br>
+          
+          Besoin d'assistance? <br>
+          <br>
+          Pour l'assistance technique des services bancaires en ligne, le soutien au paiement de factures ou les demandes générales de compte <br>
+          <br>
+          Composez le +225 0700000000</p>
+        </div>
+       
+        
+     
+      </div>
+      <div class="form-step">
+        <p><li> Parlez-nous de vos informations de base et des exigences de votre compte</li></p>
+        <div class="input-group" style="height: auto;">
+          <label for="dob">Titre <strong class="etoile">*</strong></label>
+          <select name="" id="">Selectionnez</select>
+        </div>
+      <div class="" style="display: flex;">
+        <div class="input-group" style="bottom: 50px; position: relative;" >
+          <label  for="ID">Prénom<strong class="etoile">*</strong></label>
+          <input type="text">
+        </div>
+        <div class="" style="margin-left: 3%;bottom: 17px; position: relative; ">
+          <label for="">Nom de famille <strong class="etoile">*</strong></label>
+          <input type="text" name="ID" id="ID" style="width: 300px;" />
+        </div>
+      </div>
+
+      <div class="" style="display: flex;">
+        <div class="input-group" style=" bottom: 100px; position: relative;">
+          <label for="dob">Genre <strong class="etoile">*</strong></label>
+          <select name="" id="">
+            <option value="">Selectionnez</option> 
+          <option value="">F</option>
+          <option value="">M</option>
+        </select>
+        </div>
+        <div class="" style="margin-left: 3%; position: relative; top: 31px;">
+          <label for="">Date de naissance<strong class="etoile">*</strong></label>
+          <input type="date" name="ID" id="ID" style="width: 300px;" />
+        </div>
+      </div>
+   
+
+        <div class="input-group" style=" bottom: 140px; position: relative;">
+          <label for="dob">Adresse<strong class="etoile">*</strong></label>
+          <input type="text">
+        </div>
+
+        <div class="input-group" style=" bottom: 155px; position: relative;">
+          <label for="dob">Pays <strong class="etoile">*</strong></label>
+          <input type="text">
+        </div>
+
+        <div class="input-group" style=" bottom: 170px; position: relative;">
+          <label for="dob">Ville <strong class="etoile">*</strong></label>
+          <input type="text">
+          <p><h2>Les champs marqués d'une * sont obligatoires</h2>
+
+            <div class="next">
+              <div class="btns-group" style="width: 350px;">
+                <a href="#" class="btn btn-prev">Previous</a>
+                <a href="#"  class="btn btn-next">Next  </a>
+            </div>
+        </div>
+          </div>
+
+          <div class="div-text2" style="bottom: 800px ; position: relative;">
+            <p>Avantages des services bancaires en ligne <br>
+              <br>
+              Vérifiez l'activité récente du compte et accédez aux soldes des comptes à partir d'un emplacement pratique. <br>
+              <br>
+              Transférez des fonds entre vos comptes BankSolu et les comptes d'autres banques. <br>
+              <br>
+              <br>
+              <br>
+              Besoin d'assistance? <br>
+              <br>
+              Pour l'assistance technique des services bancaires en ligne, le soutien au paiement de factures ou les demandes générales de compte <br>
+              <br>
+              Composez le +225 0700000000</p>
+            </div>
+          
+      </div>
+      </div>
+      <div class="form-step">
+        <p><li>Parlez-nous de vos informations de base et des exigences de votre compte</li></p>
+        <div class="input-group">
+          <label for="password">Nouvel identifiant d'utilisateur<strong class="etoile">*</strong></label>
+          <input type="password" placeholder="Saisir l'ID utilisateur" name="password" id="password" />
+        </div>
+
+        <div class="input-group">
+          <label for="password">Nouveau mot de passe<strong class="etoile">*</strong></label>
+          <input type="password" placeholder="Entrez un nouveau mot de passe" name="password" id="password" />
+        </div>
+
+        <div class="input-group" style="width: 30%;">
+          <label for="confirmPassword">Vérifiez le nouveau mot de passe<strong class="etoile">*</strong></label>
+          <input style="width: 67%;"
+          placeholder="vérifier le  nouveau mot de passe"
+            type="password"
+            name="confirmPassword"
+            id="confirmPassword"
+          />
+          <div style="width: 100%;">
+         <div style="display: flex; ">
+          <input type="checkbox" style="width:10px;">
+          <label style="font-size: 15px; margin-top: 6px;" for="">J'accepte d'activer les alertes WhatsApp.</label>
+        </div>
+        <div style="display: flex; ">
+          <input type="checkbox" style="width:10px;" >
+          <label style="font-size: 15px; margin-top: 6px;"  for="">J'accepte d'activer les e-mails promotionnels de BankSolu et de ses partenaires.</label>
+        </div>
+      </div>
+
+        </div>
+        <div class="btns-group" style="width: 20%; height: 45px;">
+          <a href="#" class="btn btn-prev">Previous</a>
+          <input type="submit" value="Submit" class="btn" />
+        </div>
+      </div>
+      <p class="C">© Tous droits reservé. BankSolu</p>
+    </form>
+    <script src="p.js"></script>
+  </body>
+</html>

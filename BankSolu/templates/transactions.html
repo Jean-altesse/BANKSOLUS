@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Page de transaction d'argent</title>
+  <link rel="stylesheet" type="text/css" href="../static/css/transactions.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Transaction</h1>
+    <form>
+      <div class="form-group">
+        <label for="sender">Expéditeur :</label>
+        <input type="text" id="sender" name="sender" required>
+      </div>
+      <div class="form-group">
+        <label for="recipient">Destinataire :</label>
+        <input type="text" id="recipient" name="recipient" required>
+      </div>
+      <div class="form-group">
+        <label for="amount">Montant :</label>
+        <input type="text" id="amount" name="amount" required>
+      </div>
+      <div class="form-group">
+        <label for="currency">Devise :</label>
+        <select id="currency" name="currency" required>
+          <option value="usd">Dollards Americains</option>
+          <option value="eur">EURO</option>
+          <option value="gbp">Livres Sterling</option>
+          <option value="fcfa">FCFA</option>
+          <option value="cidi">Cidis</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="network">Réseau de transaction :</label>
+        <select id="network" name="network" required>
+          <option value="paypal">PayPal</option>
+          <option value="stripe">Stripe</option>
+          <option value="venmo">Venmo</option>
+          <option value="skrill">Skrill</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="notes">Notes :</label>
+        <textarea id="notes" name="notes"></textarea>
+      </div>
+      <button type="submit">Envoyer</button>
+    </form>
+  </div>
+</body>
+</html>

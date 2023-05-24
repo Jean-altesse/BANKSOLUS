@@ -1,0 +1,57 @@
+* {
+  font-family: "Poppins", sans-serif;
+  margin: 0px;
+  padding: 0px;
+}
+
+body{
+  background-color: #fffaee;
+}
+
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  border: solid red 1px;
+  position: relative;
+  top: 6rem;
+}
+
+h1 {
+  text-align: center;
+}
+
+form {
+  display: grid;
+  grid-gap: 10px;
+}
+
+label {
+  font-weight: bold;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+input[type="submit"] {
+  background-color: #7451EB;
+  color: white;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: #9DA9F3;
+  scale: 1.02;
+}
+
+@media screen and (max-width: 480px) {
+  input,
+  textarea {
+    width: 100%;
+  }
+}
