@@ -1,3 +1,12 @@
+*{
+    list-style: none;
+	text-decoration: none;
+	font-family: "Poppins", sans-serif;
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+
 .titre
 {
     width: 100%;
@@ -5,7 +14,6 @@
     color: #7451EB;
     margin: auto;
     margin-bottom: 5%;
-
 }
 
 
@@ -16,6 +24,9 @@
     display: flex;
     justify-content: space-around;
     margin-bottom: 7%;
+    background-image: url(../img/wave.png);
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .contact_message
