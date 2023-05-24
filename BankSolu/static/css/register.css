@@ -1,0 +1,96 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300);
+
+*{
+font-family: 'Poppins', sans-serif;
+}
+
+
+body {
+font-family: 'Poppins', sans-serif;
+margin: 0;
+padding: 0;
+overflow: hidden;
+background: #FFFAEE;
+background-repeat: no-repeat;
+}
+
+.signupSection {
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+width: 800px;
+height: 450px;
+text-align: center;
+display: flex;
+color: #FFFAEE;
+box-shadow: 3px 10px 20px 5px rgba(0, 0, 0, .5);
+}
+
+.info {
+width: 45%;
+background: #7451EB;
+padding: 30px 0;
+border-right: 5px solid #9DA9F3;
+}
+
+.info h2 {
+padding-top: 30px;
+font-weight: 300;
+}
+
+.info p {
+font-size: 18px;
+}
+
+.info .icon {
+font-size: 8em;
+padding: 20px 0;
+color: #FFFAEE;
+}
+
+.signupForm {
+width: 70%;
+padding: 30px 0;
+background: #FFFAEE;
+transition: .2s;
+}
+
+.signupForm h2 {
+font-weight: 300;
+}
+
+.signupForm .inputFields {
+margin: 15px 0;
+font-size: 16px;
+padding: 10px;
+width: 250px;
+border: 1px solid #7451EB;
+border-top: none;
+border-left: none;
+border-right: none;
+color: #7451EB;
+outline: none;
+}
+
+.noBullet {
+list-style-type: none;
+padding: 0;
+}
+
+#join-btn {
+border: 1px solid#7451EB;
+border-radius: 20px;
+background: #7451EB;
+font-size: 18px;
+color: #FFFAEE;
+margin-top: 20px;
+padding: 10px 50px;
+cursor: pointer;
+transition: .4s;
+}
+
+::placeholder{
+  color: #9DA9F3;
+  font-size: 12px;
+}
