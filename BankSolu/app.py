@@ -1,29 +1,29 @@
-from flask import Flask, render_template, request, redirect, url_for
-from classe import User
+from flask import Flask, render_template, request
 
 app = Flask(__name__)
 
-@app.route("/", methods=['GET', 'POST'])
-def index():
+# Route pour le formulaire d'inscription
+@app.route('/', methods=['GET', 'POST'])
+def registration():
     if request.method == 'POST':
-        name = request.form.get("nom")
-        prenom = request.form.get("prenom")
-        email = request.form.get("email")
-        num = request.form.get("num")
-        user = User()
-        user.add_student(name, prenom, email, num)
-        print(f"nom: {name}, prenom: {prenom}, email: {email}, num: {num}")
-        return redirect(url_for("user"))
-    return render_template("index.html")
+        name = request.form['name']
+        prenom = request.form['prenom']
+        email = request.form['email']
+        phone = request.form['phone']
+        
+        # Vérifier si les informations existent dans la base de données users.db
+        # Faire la vérification ici
+        
+        # Si les informations ne sont pas présentes dans la base de données
+        if not infos_exist:
+            # Effectuer une action (par exemple, afficher un message d'erreur)
+            return render_template('verification_failed.html')
+        
+        # Si les informations existent dans la base de données
+        # Effectuer une action (par exemple, rediriger vers une autre page)
+        return render_template('verification_success.html')
+    
+    return render_template('registration.html')
 
-@app.route('/students')
-def student():
-    user = User()
-    data = user.get_all_user()
-    for i in data:
-        print(i)
-    return render_template("list.html", users=user.get_all_user())
-
-@app.route('/students/<int:id>')
-def get_user(id):
-    return f"""<h2>Je suis l'élève {id}: </h3>"""
+if __name__ == '__main__':
+    app.run(debug=True)

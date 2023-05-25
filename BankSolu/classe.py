@@ -7,7 +7,7 @@ cur = conn.cursor()
 class User:
 
     def __init__(self):
-        self.conn = sqlite3.connect("../data/users.db")
+        self.conn = sqlite3.connect("./data/users.db")
         self.conn.row_factory = sqlite3.Row
         self.cur = self.conn.cursor()
         self.create_table()
@@ -28,7 +28,7 @@ class User:
     def get_all_user(self):
         self.cur.execute('''SELECT * FROM users''')
         users = self.cur.fetchall()
-        return students 
+        return users 
      
     def get_user(self):
         pass
