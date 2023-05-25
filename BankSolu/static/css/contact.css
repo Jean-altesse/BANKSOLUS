@@ -1,3 +1,12 @@
+*{
+    list-style: none;
+	text-decoration: none;
+	font-family: "Poppins", sans-serif;
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+
 .titre
 {
     width: 100%;
@@ -5,7 +14,6 @@
     color: #7451EB;
     margin: auto;
     margin-bottom: 5%;
-
 }
 
 
@@ -16,6 +24,9 @@
     display: flex;
     justify-content: space-around;
     margin-bottom: 7%;
+    background-image: url(../img/wave.png);
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .contact_message
@@ -121,3 +132,161 @@
     color: #9DA9F3;
 
 }
+
+/* Styles pour les écrans de 768px et moins */
+@media only screen and (max-width: 768px) {
+    .titre {
+        /* Ajuste la taille de la police et la marge pour les écrans de 768px et moins */
+        font-size: 24px;
+        margin-bottom: 3%;
+    }
+
+    .espace_contact {
+        /* Ajuste l'espacement entre les éléments pour les écrans de 768px et moins */
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+        margin-bottom: 5%;
+    }
+
+    .contact_message,
+    .contact_phone,
+    .contact_locate {
+        /* Ajuste la largeur et la hauteur des éléments de contact pour les écrans de 768px et moins */
+        width: 80%;
+        height: 200px;
+        margin-bottom: 5%;
+    }
+
+    .message_i,
+    .phone_i,
+    .locate_i {
+        /* Ajuste la taille des icônes pour les écrans de 768px et moins */
+        width: 50%;
+        height: 60px;
+        bottom: 40px;
+    }
+}
+
+/* Styles pour les écrans de 480px et moins */
+@media only screen and (max-width: 480px) {
+    .titre {
+        /* Ajuste la taille de la police et la marge pour les écrans de 480px et moins */
+        font-size: 20px;
+        margin-bottom: 2%;
+    }
+
+    .espace_contact {
+        /* Ajuste l'espacement entre les éléments pour les écrans de 480px et moins */
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+        margin-bottom: 3%;
+    }
+
+    .contact_message,
+    .contact_phone,
+    .contact_locate {
+        /* Ajuste la largeur et la hauteur des éléments de contact pour les écrans de 480px et moins */
+        width: 90%;
+        height: 160px;
+        margin-bottom: 3%;
+    }
+
+    .message_i,
+    .phone_i,
+    .locate_i {
+        /* Ajuste la taille des icônes pour les écrans de 480px et moins */
+        width: 60%;
+        height: 40px;
+        bottom: 30px;
+    }
+}
+
+/* Styles communs à tous les écrans */
+
+.titre {
+    /* Ajoute des styles communs à tous les écrans */
+    width: 100%;
+    text-align: center;
+    color: #7451EB;
+    margin: auto;
+    margin-bottom: 5%;
+}
+
+.espace_contact {
+    /* Ajoute des styles communs à tous les écrans */
+    width: 100%;
+    height: 50vh;
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 7%;
+}
+
+.contact_message,
+.contact_phone,
+.contact_locate {
+    /* Ajoute des styles communs à tous les écrans */
+    width: 25%;
+    height: 68%;
+    background-color: #fffaef;
+    border: 1px solid #9DA9F3;
+    border-radius: 20px;
+    position: relative;
+    top: 30%;
+}
+
+.message_i,
+.phone_i,
+.locate_i {
+    /* Ajoute des styles communs à tous les écrans */
+
+    height: 40%;
+    background-color: #7451EB;
+    border-radius: 100px;
+    margin: auto;
+    position: relative;
+    bottom: 70px;
+}
+
+.message_i i,
+.locate_i i {
+    /* Ajoute des styles communs à tous les écrans */
+    color: #fffaef; 
+    font-size: 5em;
+    position: relative;
+    left: 25%;
+    top: 20%;
+}
+
+.contact_phone .phone_i {
+    /* Ajoute des styles spécifiques pour l'élément de contact "contact_phone" */
+    width: 45%;
+    height: 30%;
+    background-color: #7451EB;
+    border-radius: 100px;
+    margin: auto;
+    position: relative;
+    bottom: 50px;
+}
+
+.description {
+    /* Ajoute des styles communs à tous les écrans */
+    width: 100%;
+    height: 20%;
+    text-align: center;
+}
+
+.locate {
+    /* Ajoute des styles communs à tous les écrans */
+    width: 100%;
+    height: 20%;
+    position: relative;
+    top: 25%;
+    text-align: center;
+    color: #9DA9F3;
+}
+
+
+
+
