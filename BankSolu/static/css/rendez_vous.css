@@ -1,34 +1,31 @@
 * {
   font-family: "Poppins", sans-serif;
-  margin: 0px;
-  padding: 0px;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body{
-  background-color: #fffaee;
+  background-color: #FFFAEE;
 }
 
 .container {
-  max-width: 600px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  max-width: 800px;
   margin: 0 auto;
-  padding: 20px;
+  margin-top: 8rem;
   border: solid #9DA9F3 3px;
   border-radius: 20px;
   box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, .2);
-  position: relative;
-  top: 6rem;
-  /* background-image: url(../img/prise.jpg); */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   background-color: rgba(137, 149, 221, .4);
-  align-items: center;
+  width: 100%;
 }
 
-.image{
-  width: 200px;
-  height: 200px;
-}
 
 h1 {
   text-align: center;
@@ -59,6 +56,7 @@ input[type="submit"] {
   background-color: #7451EB;
   color: white;
   cursor: pointer;
+  width: 8rem;
 }
 
 input[type="submit"]:hover {
@@ -66,19 +64,7 @@ input[type="submit"]:hover {
   scale: 1.02;
 }
 
-footer {
-  margin-top: 20.2rem;
-  background-color: #7451EB;
-  text-align: center;
-  padding: 10px;
-  color: #fffaee;
-}
-
-footer p {
-  margin: 0;
-}
-
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 1440px) {
   input,
   textarea {
     width: 100%;
