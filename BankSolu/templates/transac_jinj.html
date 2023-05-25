@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Transactions</title>
+</head>
+<body>
+    <h1>Solde: {{ solde.montant }}</h1>
+
+    <h2>Dépôts:</h2>
+    <ul>
+        {% for depot in depots %}
+        <li>{{ depot.montant }}</li>
+        {% endfor %}
+    </ul>
+
+    <h2>Retraits:</h2>
+    <ul>
+        {% for retrait in retraits %}
+        <li>{{ retrait.montant }}</li>
+        {% endfor %}
+    </ul>
+
+    <h2>Faire un dépôt:</h2>
+    <form action="/depot" method="POST">
+        <input type="text" name="montant" placeholder="Montant du dépôt" required>
+        <input type="submit" value="Déposer">
+    </form>
+
+    <h2>Faire un retrait:</h2>
+    <form action="/retrait" method="POST">
+        <input type="text" name="montant" placeholder="Montant du retrait" required>
+        <input type="submit" value="Retirer">
+    </form>
+</body>
+</html>
