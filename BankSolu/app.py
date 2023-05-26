@@ -20,28 +20,49 @@ def inscription():
         phone = request.form['phone']
         user = User()
         try:
-            user.add_user(name,prenom,email, mdp,phone)
-            print("passs ooo")
-        except:
+            if not user.get_user_by_email(email):
+                user.add_user(name,prenom,email, mdp,phone)
+                print("passs ooo")
+                return redirect(url_for('connexion'))
             return render_template("inscription.html", error="Un utilisateur avec cet email existe déjà")
+        except:
+            return render_template("inscription.html", error="Une Erreur s'est produite lors de l'insertion")
         
-        return redirect(url_for('tableau'))
+        
     return render_template('inscription.html')
 
-@app.route('/show_login', methods=['POST', 'GET'])
-def show_login():
+@app.route('/About', methods=['POST', 'GET'])
+def about():
+    return render_template('login.html')
+
+@app.route('/About', methods=['POST', 'GET'])
+def about():
     return render_template('login.html')
 
 
 # Login route
 @app.route('/connexion', methods=['POST', 'GET'])
 def connexion():
-    email = request.form['email']
-    password = request.form['password']
-    
+    if request.method=="POST":
+        email = request.form['email']
+        password = request.form['password']
+        user=User()
+        try:
+            if user.login_user(email, password):
+                return redirect(url_for('tableau'))
+            return render_template('login.html', error="Email ou mot de passe incorrect")
+        #     user = db.get_user_by_email(email)
+        #     if user:
+        #         print("True")
+        #         return redirect(url_for('tableau'))
+        #     else:
+        #         print("False")
+        #         return render_template('login.html', error="Email ou mot de passe incorrect")
+        except:
+            return render_template('login.html', error="Une Erreur s'est produite lors de l'inscription")
+    return render_template('login.html')
     # Perform login verification here using the User class
     
-    return redirect(url_for('index'))
 
 @app.route("/dashboard", methods=['GET', 'POST'])
 def tableau():

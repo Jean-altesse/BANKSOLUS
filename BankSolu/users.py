@@ -30,9 +30,9 @@ class User:
             self.conn.commit()
             print("User enregistrer")
             return "User enregistrer"
-        except:
-            print("Error")
-            return "Error"
+        except Exception as e:
+            print(f"Error : {e}")
+            return None
 
     def get_all_users(self):
         self.cur.execute('SELECT * FROM users')
@@ -65,6 +65,46 @@ class User:
             }
             return user
 
+        return None
+    
+    def get_user_by_email(self, email):
+        self.cur.execute('SELECT * FROM users WHERE email=?', (email,))
+        row = self.cur.fetchone()
+
+        if row:
+            user = {
+                'id': row['id'],
+                'name': row['name'],
+                'prenom': row['prenom'],
+                'email': row['email'],
+                'phone': row['phone']
+            }
+            return user
+
+        return None
+
+    def check_password(self,mdp):
+        self.cur.execute('SELECT mdp FROM users')
+        rows = self.cur.fetchall()
+        mdp = []
+        for row in rows:
+            mdp.append(row['mdp'])
+            return mdp
+        return None
+    
+    def login_user(self, email, password):
+        self.cur.execute('SELECT * FROM users WHERE email=? AND mdp=?', (email,password))
+        row = self.cur.fetchone()
+
+        if row:
+            user = {
+                'id': row['id'],
+                'name': row['name'],
+                'prenom': row['prenom'],
+                'email': row['email'],
+                'phone': row['phone']
+            }
+            return user
         return None
 
     def update_user(self, user_id, new_user):

@@ -11,7 +11,7 @@
 			href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap"
 			rel="stylesheet"
 		/>
-		<title>Inscription</title>
+		<title>Connexion</title>
 	</head>
 	<body>
 		<div class="signupSection">
@@ -21,8 +21,11 @@
 				<p>Le futur est ici</p>
 				<img src="../static/img/Logo.png" alt="" />
 			</div>
-			<form action="connexion" method="POST" class="signupForm" name="signupform">
-				<h2>Inscription</h2>
+			<form action="" method="POST" class="signupForm" name="signupform">
+				{% if error %}
+				<p style="color: red;">{{error}}</p>
+				{% endif %}
+				<h2>Connexion</h2>
 				<ul class="noBullet">
 					<li>
 						<label for="email"></label>

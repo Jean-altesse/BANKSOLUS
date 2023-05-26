@@ -16,6 +16,9 @@
 	</head>
 
 	<body>
+		{% if error %}
+		<p style="color: red;">{{error}}</p>
+		{% endif %}
 		<h1 style="color: #7451eb; font-weight: bold">
 			Veuillez remplir ce formulaire pour vous inscrire
 		</h1>
