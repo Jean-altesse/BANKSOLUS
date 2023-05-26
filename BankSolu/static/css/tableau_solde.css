@@ -1,0 +1,129 @@
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
+      margin: 0;
+      padding: 0;
+    }
+    
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+    
+    .header {
+      margin-left: 18%;
+      margin-bottom: 10px;
+    }
+    
+    .header h1 {
+      color: #333;
+      font-size: 24px;
+      margin: 0;
+      padding: 0;
+    }
+    
+    .solde {
+      background-color: #fff;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      padding: 20px;
+      margin-bottom: 30px;
+      text-align: center;
+      font-size: 60px;
+    }
+    .solde strong{
+        color: rgb(136, 236, 136);
+    }
+    .solde h2 {
+      font-size: 25px;
+      margin: 0;
+      padding: 0;
+    }
+    
+    .solde p {
+      color: #666;
+      font-size: 30px;
+      margin-top: 10px;
+    }
+    
+    .historique {
+      background-color: #fff;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      padding: 20px;
+      margin-bottom: 30px;
+    }
+    
+    .historique h2 {
+      color: #7451EB;
+      font-size: 20px;
+      margin: 0;
+      padding: 0;
+      margin-bottom: 20px;
+    }
+    h4{
+        color: #7551ebd4;
+    }
+    
+    .transaction {
+      margin-bottom: 10px;
+    }
+    
+    .transaction span {
+      color: #333;
+      font-weight: bold;
+      margin-right: 10px;
+    }
+    
+    .transaction .num-transaction {
+      color: #666;
+    }
+    
+    .transaction .montant {
+      color: #666;
+      text-decoration: underline;
+    }
+    
+    .publicite {
+      background-color: #7551eb6a;
+      border: 1px solid #ddd;
+      border-radius: 15px;
+      padding: 20px;
+    }
+    
+    .publicite h3 {
+      color: #333;
+      font-size: 18px;
+      margin: 0;
+      padding: 0;
+      margin-bottom: 10px;
+    }
+    
+    .publicite p {
+      color: white;
+      font-size: 16px;
+      margin: 0;
+      padding: 0;
+    }
+    
+    .publicite .pub {
+      margin-top: 10px;
+    }
+    
+    .publicite .pub a {
+      display: inline-block;
+      background-color: #7451EB;
+      color: #fff;
+      text-decoration: none;
+      padding: 8px 16px;
+      border-radius: 3px;
+      font-size: 14px;
+      transition: background-color 0.3s;
+    }
+    
+    .publicite .cta a:hover {
+      background-color: #666;
+    }
