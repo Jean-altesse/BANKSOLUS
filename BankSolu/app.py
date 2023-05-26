@@ -31,13 +31,17 @@ def inscription():
         
     return render_template('inscription.html')
 
-@app.route('/About', methods=['POST', 'GET'])
-def about():
+@app.route('/session', methods=['POST', 'GET'])
+def session():
+    return render_template('contact.html')
+
+@app.route('/login', methods=['POST', 'GET'])
+def show_login():
     return render_template('login.html')
 
-@app.route('/About', methods=['POST', 'GET'])
+@app.route('/about', methods=['POST', 'GET'])
 def about():
-    return render_template('login.html')
+    return render_template('apropos.html')
 
 
 # Login route

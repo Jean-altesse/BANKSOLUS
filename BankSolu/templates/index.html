@@ -29,6 +29,8 @@
 			crossorigin="anonymous"
 			referrerpolicy="no-referrer"
 		></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js" integrity="sha512-w+iChLJuf/E/0klIN6Q0KjHTkZq7U6/gzX6DjKvwF79oiyj7c6Y17jfMiGue5E5KjGZfC28i9XO09orCuFCeBQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://kit.fontawesome.com/2b41c09eb4.js" crossorigin="anonymous"></script>
 
 		<title>BankSolu</title>
 	</head>
@@ -41,8 +43,8 @@
 			</label>
 			<ul class="menu">
 				<li><a href="{{url_for('accueil')}}" class="navTex">Accueil</a></li>
-				<li><a href="#" class="navTex">A propos</a></li>
-				<li><a href="#" class="navTex">Session</a></li>
+				<li><a href="{{url_for('about')}}" class="navTex">A propos</a></li>
+				<li><a href="{{url_for('session')}}" class="navTex">Session</a></li>
 				<li>
 					<a href="{{url_for('inscription')}}" class="navTex"
 						><button class="btn-register-login">
