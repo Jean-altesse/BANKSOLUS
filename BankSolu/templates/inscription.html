@@ -20,7 +20,7 @@
 			Veuillez remplir ce formulaire pour vous inscrire
 		</h1>
 		<div class="container">
-			<form action="#" method="post">
+			<form action="inscription" method="post">
 				<label for="name">Nom :</label>
 				<input
 					type="text"
@@ -48,6 +48,15 @@
 					required
 				/>
 
+				<label for="mdp">Mot de passe :</label>
+				<input
+					type="password"
+					id="mdp"
+					name="mdp"
+					placeholder="Votre mot de passe"
+					required
+				/>
+
 				<label for="phone">Numéro de téléphone :</label>
 				<input
 					type="tel"
@@ -57,9 +66,9 @@
 					required
 				/>
 
-				<a href="{{url_for('inscription')}}"><input type="submit" value="Soumettre" /></a>
+				<input type="submit" value="Soumettre" />
 				<div style="display: flex; justify-content: flex-end; font-weight: 200">
-					Vous avez déja un compte ? <a href="../templates/login.html">Ici</a>
+					Vous avez déja un compte ? <a href="{{url_for('show_login')}}">Ici</a>
 				</div>
 			</form>
 		</div>
