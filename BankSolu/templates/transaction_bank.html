@@ -1,3 +1,22 @@
+<!-- <!DOCTYPE html>
+<html>
+<head>
+    <title>Tableau de bord du compte bancaire</title>
+    <link rel="stylesheet" type="text/css" href="b.css">
+</head>
+<body>
+    <div class="tableau-de-bord">
+        <div class="card-solde">
+            <h2>Solde</h2>
+            <p class="montant">€10,000.00</p>
+        </div>
+        <div class="boutons">
+            <button class="bouton">Dépôt</button>
+            <button class="bouton">Retrait</button>
+        </div>
+    </div>
+</body>
+</html> -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,7 +24,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="../static/css/Tableau_bord.css">
+    <link rel="stylesheet" href="../static/css/transaction_bank.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
@@ -44,13 +63,13 @@
                         </a>
                     </li>
                     <li class="nav-link">
-                        <a href="../templates/transaction_bank.html">
+                        <a href="#">
                             <i class='bx bx-transfer icon'></i>
                             <span class="text nav-text">Transaction</span>
                         </a>
                     </li>
                     <li class="nav-link">
-                        <a href="../templates/rendez_vous.html">
+                        <a href="#">
                             <i class='bx bx-calendar-check icon'></i>
                             <span class="text nav-text">Prise de rendez-vous</span>
                         </a>
@@ -98,11 +117,53 @@
             </div>
         </div>
     </nav>
-
+<!-- transaction bancaire -->
     <section class="home">
-        <div class="text">Bienvenue</div>
+        <div class="text">
+            <div class="tableau-de-bord">
+                <h1 style="position: relative; bottom: 200px; font-size: 30px; text-decoration: underline; color: rgba(0, 0, 0, 0.803);"><i class='bx bx-transfer icon' style="color: #7451EB;"></i> Transaction bancaire</h1>
+                
+                <div class="card-solde">
+                    <h2>Solde</h2>
+                    <p class="montant" id="solde">10,000.00</p>
+                </div>
+                <div class="boutons">
+                    <button class="bouton" onclick="afficherFormulaire('formulaire-depot')">Dépôt</button>
+                    <button class="bouton" onclick="afficherFormulaire('formulaire-retrait')">Retrait</button>
+                </div>
+                <div id="formulaire-depot" class="formulaire">
+                    <h3>Dépôt</h3>
+                    <form onsubmit="effectuerDepot(event)">
+                        <select  name="" id="">
+                            <option  value="">Wave <img style="width: 20px; height: 20px; background: url(../static/img/Capture\ d’écran\ 2023-05-25\ à\ 10.14.23.png);" src="../static/img/Capture d’écran 2023-05-25 à 10.14.23.png" alt=""></option>
+                            <option value="">Orange money</option>
+                            <option value="">MOOV money</option>
+                            <option value="">MTN money</option>
+                        </select>
+                        <input type="tel" placeholder="Numéro" id="numero-depot" />
+                        <input type="tel" placeholder="Montant" id="montant-depot" />
+                        <input type="submit" value="Valider" />
+                    </form>
+                </div>
+                <div id="formulaire-retrait" class="formulaire">
+                    <h3>Rétrait</h3>
+                    <form onsubmit="effectuerRetrait(event)">
+                        <select  name="" id="">
+                            <option  value="">Wave <img style="width: 20px; height: 20px; background: url(../static/img/Capture\ d’écran\ 2023-05-25\ à\ 10.14.23.png);" src="../static/img/Capture d’écran 2023-05-25 à 10.14.23.png" alt=""></option>
+                            <option value="">Orange money</option>
+                            <option value="">Moov money</option>
+                            <option value="">MTN money</option>
+                        </select>
+                        <input type="tel" placeholder="Numéro" id="numero-retrait" />
+                        <input type="tel" placeholder="Montant" id="montant-retrait" />
+                        <input type="submit" value="Valider" />
+                    </form>
+                </div>
+            </div>
+            
+        </div>
     </section>
 
-    <script src="../static/js/Tableau_bord.js"></script>
+    <script src="../static/js/transaction_bank.js"></script>
 </body>
 </html>

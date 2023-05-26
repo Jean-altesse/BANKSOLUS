@@ -91,3 +91,29 @@ h2{
     width: 20rem;
     height: 20rem;
 }
+
+#slideshow {
+    width: 100%;
+    height: 40%;
+    position: relative;
+    overflow: hidden;
+    margin-top: 3rem;
+  }
+
+  #slideshow img
+  {
+    position: relative;
+    left: 10%;
+    width: 80%;
+  }
+  
+  #slideshow ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  #slideshow li:not(:first-child) {
+    display: none;
+  }
+  
