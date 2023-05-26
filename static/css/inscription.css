@@ -30,10 +30,6 @@ body{
   height: 200px;
 }
 
-h1 {
-  text-align: center;
-}
-
 form {
   display: grid;
   grid-gap: 10px;
@@ -64,18 +60,6 @@ input[type="submit"] {
 input[type="submit"]:hover {
   background-color: #9DA9F3;
   scale: 1.02;
-}
-
-footer {
-  margin-top: 20.2rem;
-  background-color: #7451EB;
-  text-align: center;
-  padding: 10px;
-  color: #fffaee;
-}
-
-footer p {
-  margin: 0;
 }
 
 @media screen and (max-width: 480px) {
